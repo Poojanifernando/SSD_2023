@@ -1,0 +1,16 @@
+.ml2 {
+    font-weight: 900;
+    font-size: 3.7em;
+  }
+  
+  .ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  .home{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 280%;
+    text-shadow: 1px 1px 2px black, 0 0 18px rgb(47, 48, 114), 0 0 2px rgb(43, 46, 56);
+    
+  }
