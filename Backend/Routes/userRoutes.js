@@ -16,12 +16,14 @@ router.patch("/updateUserById/:id",updateUser);
 
 router.post("/signup",
 	[
-		check("name", "Name is required").not().isEmpty(),
-		check("email", "Please include a valid email").isEmail(),
+		check("name", "Name is required").not().isEmpty().trim().escape(),
+		check("email", "Please include a valid email").isEmail().trim().escape(),
 		check(
 			"password",
 			"Please enter password with 6 or more characters"
-		).isLength({ min: 6 }),
+		).isLength({ min: 6 })
+		.trim()
+		.escape(),
 	],
 	registerUser);
 
