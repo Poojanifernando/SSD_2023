@@ -39,12 +39,12 @@ const app = express();
 //declare the port to run the backend
 const PORT = process.env.PORT || 5000;
 
-//middlewares
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+// Middleware configurations
+const corsOptions = {
+  origin: "http://localhost:1234", // Allow requests from this origin
+};
+
+app.use(cors(corsOptions));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
